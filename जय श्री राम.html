@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lord Rama - Divine Virtue</title>
+    <style>
+        body {
+            background-color: #FF9933; /* Saffron color */
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #FFFFFF; /* White color */
+        }
+
+        .twinkling {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background-color: #FFF; /* White color */
+            border-radius: 50%;
+            animation: twinkling 1s infinite;
+            opacity: 0;
+        }
+
+        @keyframes twinkling {
+            0% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        #ram-image {
+            max-width: 50%;
+            height: auto;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        #ram-gallery {
+            display: flex;
+            justify-content: space-around;
+            margin: 16px 0;
+        }
+
+        .gallery-image {
+            max-width: 20%;
+            border-radius: 8px;
+            margin: 0 5px;
+        }
+
+        #interactive-object {
+            font-size: 18px;
+            padding: 10px;
+            background-color: #8B4513; /* SaddleBrown color */
+            color: #FFF; /* White color */
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        #interactive-object:hover {
+            background-color: #CD853F; /* Peru color on hover */
+        }
+
+        #widget-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .widget {
+            width: 45%;
+            padding: 20px;
+            background-color: #8B4513; /* SaddleBrown color */
+            color: #FFF; /* White color */
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .widget:hover {
+            background-color: #CD853F; /* Peru color on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lord Rama - Divine Virtue</h1>
+
+    <div id="stars"></div>
+    <img id="ram-image" src="https://i.pinimg.com/originals/49/ec/e5/49ece50fe3b00ade6f59fe58a668c9bc.jpg" alt="Lord Rama">
+
+    <h2>Life and Teachings</h2>
+    <p>Lord Rama, the seventh avatar of Lord Vishnu, exemplifies righteousness, loyalty, and compassion. His life and teachings are chronicled in the epic Ramayana, guiding humanity towards a virtuous path.</p>
+
+    <div id="ram-gallery">
+        <img class="gallery-image" src="https://wallpapers.com/images/hd/jai-shree-ram-hd-rama-proud-stance-44ba5m6i7gl36hfz.jpg" alt="Lord Rama - Image 1">
+        <img class="gallery-image" src="https://im.rediff.com/news/2020/aug/04ram-temple1.jpg?w=670&h=900" alt="Lord Rama - Image 2">
+        <img class="gallery-image" src="https://wallpaperaccess.com/full/4044782.jpg" alt="Lord Rama - Image 3">
+    </div>
+
+    <div id="interactive-object" onclick="showMessage()">Click for a divine message</div>
+
+    <div id="widget-container">
+        <div class="widget" onclick="showWidgetContent('widget1')">Widget 1</div>
+        <div class="widget" onclick="showWidgetContent('widget2')">Widget 2</div>
+    </div>
+
+    <script>
+        function showMessage() {
+            alert("Jai Shri Ram! May Lord Rama's blessings bring peace and prosperity to your life.");
+        }
+
+        function showWidgetContent(widgetId) {
+            if (widgetId === 'widget1') {
+                alert("Widget 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+            } else if (widgetId === 'widget2') {
+                alert("Widget 2: In the Ramayana, Lord Rama's unwavering devotion to dharma serves as an inspiration to all.");
+            }
+        }
+
+        // Generate more twinkling stars for a pronounced effect
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.classList.add('twinkling');
+            star.style.left = `${Math.random() * 100}%`;
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.animationDelay = `${Math.random() * 2}s`;
+            starsContainer.appendChild(star);
+        }
+    </script>
+
+</body>
+</html>
